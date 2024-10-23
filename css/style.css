@@ -890,3 +890,138 @@ section {
         margin-top: 20px;
     }
 }
+/* services-1 */
+.services-1 {
+    padding-top: 80px;
+    position: relative; 
+}
+
+.services-1 .text {
+    margin-top: 70px;
+}
+
+.services-1 h1 {
+    font-weight: bold;
+    font-size: 46px; 
+    margin: 10px 0px; 
+}
+
+.services-1 p {
+    margin: 20px 0 10px 0;
+}
+
+.img-container-services-1 {
+    padding-top: 70px;
+    padding: 50px;
+    position: relative; 
+    z-index: 100; /
+}
+
+.img-container-services-1 img {
+    z-index: 100; 
+    position: relative;
+}
+
+/* services-item */
+.services-item-content blockquote {
+    color: #fd1111;
+}
+
+.services-item-1 .col-lg-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-item-icon img {
+    max-width: 100%;
+    height: auto;
+    z-index: 100; 
+    position: relative;
+}
+
+/* SVG container */
+.svg-container-service-1 {
+    position: absolute; 
+    width: 100%;
+    height: auto; 
+    z-index: 0;
+    margin: 0; 
+    padding: 0;
+    left: 0;
+}
+
+.svg-container-service-1.line-1 {
+    top: 520px;
+    transform: rotate(90deg);
+}
+
+.svg-container-service-1.line-2 {
+    top: 1350px; 
+}
+.svg-container-service-1.line-3 {
+    top: 2150px; 
+    transform: rotate(90deg);
+}
+.svg-container-service-1.line-4 {
+    top: 2950px; 
+}
+.svg-container-service-1.line-5 {
+    top: 3650px; 
+    transform: rotate(90deg);
+}
+/* Image containers */
+.services-1 .img-container-services-1,
+.services-item-1 .services-item-icon {
+    margin-bottom: 0;
+    padding: 0;
+    position: relative; /* Ensure images stay on top */
+    z-index: 100; /* Ensure images are above the SVG */
+}
+
+/* Remove bottom padding from the service sections */
+.services-1,
+.services-item-1 {
+    padding-bottom: 0;
+}
+
+/* SVG Path styling */
+.timeline-1 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.image-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    background-color: red; /* Background color */
+    border-radius: 50%; /* Make it circular */
+    transform: translate(-50%, -50%); /* Center the circle */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Animation for scaling */
+    opacity: 0; /* Initially hidden */
+    z-index: -1; /* Position behind the image */
+}
+
+.service-image {
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transition for image */
+    opacity: 0.5; /* Default state */
+}
+
+.service-image.active {
+    transform: scale(1.1); /* Scale the image */
+    opacity: 1; /* Full opacity */
+}
+
+.image-background.active {
+    transform: translate(-50%, -50%) scale(1.5); /* Scale up background on active */
+    opacity: 1; /* Make it visible */
+}
+/* service-2 */
+.service-2{
+    margin-top: -300px;
+    padding-top: 100px;
+    background-color: #000;
+}

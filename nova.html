@@ -3,33 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Owl Carousel Test</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <title>SVG Scroll Animation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Add your CSS here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .services-1 {
+            padding-top: 80px;
+            position: relative;
+        }
+
+        .services-item-1 {
+            padding: 70px 0;
+        }
+
+        .svg-container-service-1 {
+            position: relative; 
+            width: 100%;
+            height: auto; 
+            z-index: 0;
+            margin: 0; 
+            padding: 0;
+        }
+
+        .timeline-1 {
+            width: 100%;
+            height: auto;
+        }
+
+        .circle {
+            fill: red;
+        }
+    </style>
 </head>
 <body>
 
-<section id="index-2">
-    <div class="owl-carousel owl-theme">
-        <div class="item"><h4>Slide 1</h4></div>
-        <div class="item"><h4>Slide 2</h4></div>
-        <div class="item"><h4>Slide 3</h4></div>
+<section id="white" data-logo-color="dark" class="services-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="text">
+                    <h1>What We Do?</h1>
+                    <p>We specialize in helping sports organizations maximize revenue growth and enhance fan experiences by leveraging powerful data analytics. With tailored strategies, we make it easy for you to understand your audience, engage them like never before, and turn insights into action.</p>
+                    <a href="#" class="custom-button dark">
+                        Learn More
+                        <span class="dot wow animate__bounce" data-wow-duration="1s" data-wow-delay="0.5s"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="img-container-services-1">
+                    <img src="images/logo-dark.svg" alt="Background Image" class="image-services-1">
+                </div>                   
+            </div>
+        </div>
     </div>
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<div class="svg-container-service-1 line-1">
+    <svg class="timeline-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+        <g stroke-width="2" stroke="hsl(0, 0%, 0%)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path id="timelinePath1" d="M250 250Q466 319 400 400Q269 533 550 550"></path>
+        </g>
+        <circle id="scrollCircle1" class="circle" cx="0" cy="0" r="10"></circle>
+    </svg>
+</div>
+
+<!-- Add additional sections as needed -->
+
 <script>
-    $(document).ready(function(){
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        items: 1,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true
-      });
+    document.addEventListener('scroll', function() {
+        const path = document.getElementById('timelinePath1');
+        const circle = document.getElementById('scrollCircle1');
+
+        // Get the total height of the page and the current scroll position
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPosition = window.scrollY;
+
+        // Calculate the scroll percentage
+        const scrollPercentage = scrollPosition / totalHeight;
+
+        // Get the length of the path
+        const pathLength = path.getTotalLength();
+
+        // Calculate the new position along the path
+        const point = path.getPointAtLength(scrollPercentage * pathLength);
+
+        // Update the position of the circle
+        circle.setAttribute('cx', point.x);
+        circle.setAttribute('cy', point.y);
     });
 </script>
 
