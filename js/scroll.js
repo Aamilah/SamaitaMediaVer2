@@ -31,9 +31,9 @@ document.addEventListener('scroll', function () {
         const background = serviceItem.querySelector('.image-background');
         const image = serviceItem.querySelector('.services-item-icon img');
 
-        // Calculate the threshold for when to show the background
-        const itemTop = serviceItem.offsetTop; // Top position of the service item
-        const itemHeight = serviceItem.offsetHeight; // Height of the service item
+        
+        const itemTop = serviceItem.offsetTop; 
+        const itemHeight = serviceItem.offsetHeight; 
 
         // Check if at least half the service item is visible
         const isHalfVisible = scrollPosition + window.innerHeight >= itemTop + itemHeight / 2;
@@ -47,3 +47,15 @@ document.addEventListener('scroll', function () {
         }
     });
 });
+
+const textPath = document.querySelector('textPath');
+let offset = 0;
+
+function animateText() {
+    offset = (offset + 0.2) % 100;
+    textPath.setAttribute('startOffset', `${offset}%`);
+    requestAnimationFrame(animateText); 
+}
+
+animateText();
+

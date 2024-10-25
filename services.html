@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samaita Media | Home</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9592a3159e.js" crossorigin="anonymous"></script>
@@ -79,16 +86,42 @@
     </div>
 
     <section class="banner-index" data-logo-color="light" style="background-image: url('images/services-banner.png');">
-        <div class="banner-index-content">
-            <blockquote>What we do?</blockquote>
-            <h1>WE CRAFT STRATEGIES AND EXECUTE WITH PRECISION TO DRIVE RESULTS.</h1>
-            <a href="#" class="custom-button light">
-                Learn More
-                <span class="dot wow animate__bounce" data-wow-duration="1s" data-wow-delay="0.5s"></span>
-            </a>
-        </div>   
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="banner-index-content">
+                    <blockquote>What we do?</blockquote>
+                    <h1>WE CRAFT STRATEGIES AND EXECUTE WITH PRECISION TO DRIVE RESULTS.</h1>
+                    <a href="#" class="custom-button light">
+                        Learn More
+                        <span class="dot wow animate__bounce" data-wow-duration="1s" data-wow-delay="0.5s"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="circle-arrow-container">
+                    <svg width="200" height="200" viewBox="0 0 200 200">
+                        <defs>
+                            <path id="circlePath" d="M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
+                        </defs>
+                        <!-- Red inner circle -->
+                        <circle cx="100" cy="100" r="50" class="circle-background" />
+                        <text fill="white" font-size="14" font-family="Arial">
+                            <textPath href="#circlePath" startOffset="0%">
+                                Scroll Down - Samaita Media, The Only Company You Need - Scroll Down - Samaita Media, The Only Company You Need - 
+                            </textPath>
+                        </text>
+                    </svg>
+                    <!-- Arrow Icon with Bounce Animation -->
+                    <a href="#services-1" class="circle-arrow-link">
+                        <i class="fa fa-arrow-down circle-arrow-icon"></i>
+                    </a>
+                </div> 
+            </div>
+            
+        </div>     
     </section>
-<section id="white" data-logo-color="dark" class="services-1">
+
+<section id="services-1" data-logo-color="dark" class="services-1">
     <div class="container">
         <div class="row">
             <div class="col-lg-5">
@@ -115,7 +148,7 @@
         <g stroke-width="2" stroke="hsl(0, 0%, 0%)" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path id="timelinePath1" d="M250 250Q466 319 400 400Q269 533 550 550"></path>
         </g>
-        <circle id="scrollCircle1" cx="950" cy="950" r="8" fill="red" />
+        <circle id="scrollCircle1" cx="150" cy="150" r="8" fill="red" />
     </svg>
 </div>
 
@@ -145,7 +178,7 @@
         <g stroke-width="2" stroke="hsl(0, 0%, 0%)" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path id="timelinePath2" d="M248.6505126953125 250Q251.6505126953125 393 398.6505126953125 400Q571.6505126953125 399 548.6505126953125 550"></path>
         </g>
-        <circle id="scrollCircle2" cx="250" cy="250" r="8" fill="red" />
+        <circle id="scrollCircle2" cx="150" cy="150" r="8" fill="red" />
     </svg>
 </div>
 
@@ -175,7 +208,7 @@
         <g stroke-width="2" stroke="hsl(0, 0%, 0%)" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path id="timelinePath3" d="M250 250Q466 210 400 399Q331 592 550 549"></path>
         </g>
-        <circle id="scrollCircle3" cx="250" cy="250" r="8" fill="red" />
+        <circle id="scrollCircle3" cx="150" cy="150" r="8" fill="red" />
     </svg>
 </div>
 
@@ -205,7 +238,7 @@
         <g stroke-width="2" stroke="hsl(0, 0%, 0%)" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path id="timelinePath4" d="M248.6505126953125 250Q251.6505126953125 393 398.6505126953125 400Q571.6505126953125 399 548.6505126953125 550"></path>
         </g>
-        <circle id="scrollCircle4" cx="250" cy="250" r="8" fill="red" />
+        <circle id="scrollCircle4" cx="150" cy="150" r="8" fill="red" />
     </svg>
 </div>
 
@@ -234,7 +267,7 @@
         <g stroke-width="2" stroke="hsl(0, 0%, 0%)" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path id="timelinePath5" d="M250 250Q466 210 400 399Q331 592 550 549"></path>
         </g>
-        <circle id="scrollCircle5" cx="250" cy="250" r="8" fill="red" />
+        <circle id="scrollCircle5" cx="150" cy="150" r="8" fill="red" />
     </svg>
 </div>
 

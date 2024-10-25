@@ -181,6 +181,7 @@ blockquote{
 .circle {
     width: 50px;
     height: 50px;
+    color: white;
     background-color: #fd1111;
     border-radius: 50%;
     display: flex;
@@ -319,7 +320,173 @@ blockquote{
     font-size: 12px;
     color: white;
 }
+/* Responsive Styles */
+@media (min-width: 768px) {
+    /* Tablet and larger screens */
+    .navbar-container {
+        padding: 20px 40px;
+    }
 
+    .proposal-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto; /* Align proposal link to the right */
+    }
+
+    .proposal-link a {
+        font-size: 14px;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle i {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile screens */
+    .navbar-container {
+        padding: 10px 15px;
+    }
+
+    .proposal-link {
+        display: none;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle i {
+        font-size: 20px;
+    }
+    .left-side{
+        display: none;
+    }
+    .right-side{
+        width: 100%;
+        height: 100vh;
+    }
+    .menu-list li a {
+        font-size: 24px;
+    }
+
+    .menu-list li span {
+        font-size: 18px;
+    }
+
+    .left-side h2 {
+        font-size: 22px;
+    }
+
+    .left-side p {
+        font-size: 16px;
+    }
+
+    .logo-left-side {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Larger screens */
+    .navbar-container {
+        padding: 30px 60px;
+    }
+
+    .logo-light, .logo-dark {
+        width: 150px;
+    }
+
+    .proposal-link {
+        margin-left: 800px; /* Adjusted for large screens */
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle i {
+        font-size: 24px;
+    }
+}
+@media (max-width: 1280px) {
+    .navbar-container {
+        padding: 20px 20px; /* Reduce padding */
+    }
+
+    .logo-light, .logo-dark {
+        width: 120px; /* Slightly smaller logos */
+    }
+
+    .proposal-link {
+        display: none; /* Hide the proposal link on smaller screens */
+    }
+
+    .hamburger-menu {
+        margin-left: auto;
+    }
+
+    .left-side, .right-side {
+        width: 100%; /* Make both sides full width */
+    }
+
+    .right-side {
+        padding: 30px;
+    }
+
+    .menu-list li a {
+        font-size: 28px; /* Smaller font size for menu links */
+    }
+
+    .menu-list li span {
+        font-size: 20px; /* Smaller font size for numbers */
+    }
+}
+
+/* For even smaller screens (768px and smaller) */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 10px 15px; /* Further reduce padding */
+    }
+
+    .logo-light, .logo-dark {
+        width: 100px;
+    }
+
+    .hamburger-menu {
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle i {
+        font-size: 20px;
+    }
+
+    .left-side h2 {
+        font-size: 22px;
+    }
+
+    .right-side {
+        padding: 20px;
+    }
+
+    .menu-list li a {
+        font-size: 22px;
+    }
+}
 
 /* Banner Section */
 .banner-index {
@@ -351,7 +518,56 @@ blockquote{
     margin: 10px 0px; 
     letter-spacing: 3px; 
 }
-/* Button Container */
+@media (max-width:768px) {
+    .banner-index .banner-index-content {
+        margin-left: 0px;
+    }
+    .banner-index .banner-index-content  h1 {
+        font-size: 56px;
+    }
+}
+/* Container for circle and arrow */
+.circle-arrow-container {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    margin-top: 320px;
+    margin-left: 130px;
+}
+
+.circle-arrow-link {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: inherit;
+    text-decoration: none;
+    width: 50px; 
+    height: 50px;
+    z-index: 10; 
+}
+
+.circle-arrow-icon {
+    font-size: 36px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.circle-arrow-link:hover .circle-arrow-icon {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.circle-background {
+    fill: red; /* Inner circle color */
+}
+
+  /* Button Container */
 .custom-button {
     font-family: 'Bebas Neue', cursive; 
     position: relative;
@@ -437,7 +653,15 @@ section {
     object-fit: cover; 
     opacity: 0.5;
 }
-
+@media (max-width:768px) {
+    .index-1{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .svg-container-index-1 {
+        display: none;
+    }
+}
 /* Index-2 */
 .index-2 {
     width: 100vw; 
@@ -513,6 +737,72 @@ section {
     color: #fd1111;
     box-sizing: border-box; 
     margin-bottom: 15px;
+}
+/* For screens 1280px and smaller */
+@media (max-width: 1280px) {
+    .index-3 {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 60px;
+    }
+    .index-3 .text {
+        padding: 30px;
+    }
+    .sections-index-3 .section-item-index-3 {
+        margin: 20px;
+    }
+}
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    .index-3 {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 40px;
+        padding-bottom: 1300px;
+    }
+    .index-3 .text {
+        padding: 20px;
+    }
+    .sections-index-3 .section-item-index-3 {
+        margin: 15px;
+    }
+
+    /* Center the text on smaller screens */
+    .index-3 .text h1, .index-3 .text p, .index-3 .text h4 {
+        text-align: left;
+    }
+
+    /* Stack the icon text vertically */
+    .sections-index-3 .section-item-index-3 {
+        text-align: left;
+    }
+
+    .sections-index-3 .section-item-index-3 i {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sections-index-3 .section-item-index-3 i {
+        margin-left: 0px;
+    }
+}
+
+/* For screens 480px and smaller */
+@media (max-width: 480px) {
+    .index-3 .text h1 {
+        font-size: 24px;
+    }
+
+    .index-3 .text p, .index-3 .text h4 {
+        font-size: 14px;
+    }
+
+    .sections-index-3 .section-item-index-3 i {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+        padding: 15px;
+    }
 }
 /* Index-4 */
 .index-4 {
@@ -598,7 +888,64 @@ section {
     grid-column: 3; /* Third column */
     grid-row: 2/4; /* Second row */
 }
+@media (max-width: 1280px) {
+    .team-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-template-rows: auto; /* Allow rows to adjust automatically */
+        height: auto; /* Allow height to adjust automatically */
+    }
 
+    .item-a, .item-c {
+        grid-column: span 2; /* Make these items span across two columns */
+    }
+
+    .item-b {
+        grid-row: span 2; /* Make this item span two rows */
+    }
+
+    .item-d, .item-e {
+        grid-column: span 1; /* Keep these items as single columns */
+    }
+
+    .index-4 h2 {
+        font-size: 36px; /* Adjust font size for smaller screens */
+        padding: 20px; /* Adjust padding */
+    }
+}
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    .team-grid {
+        flex-direction: column;
+    }
+
+    .item-a, .item-c {
+        grid-column: span 1; /* Each item takes full width */
+    }
+    .item-e{
+        grid-column: span 2;
+    }
+    .item-b {
+        grid-row: span 2; /* Each item takes full width */
+    }
+
+    .index-4 h2 {
+        font-size: 18px; /* Further adjust font size */
+        padding: 50px; /* Adjust padding */
+    }
+}
+
+/* For screens 480px and smaller */
+@media (max-width: 480px) {
+    .index-4 h2 {
+        font-size: 24px; /* Smaller font size */
+        padding: 5px; /* Less padding */
+    }
+
+    .item {
+        font-size: 20px; /* Adjust font size for items */
+    }
+}
 /* Index-5 */
 .index-5{
     padding-top:100px ;
@@ -709,7 +1056,26 @@ section {
     transform: translateX(5px);
 }
 
-
+@media (max-width: 768px) {
+    .index-5{
+        padding-top: 20px;
+    }
+    .quote-icon {
+        font-size: 20px;
+    }
+    .quote-text {
+        font-size: 26px;
+    }
+    .right-quote {
+        bottom: 60px;
+        left: 170px;
+    }
+    .circle-index-5 {
+        width: 380px;
+        height: 380px;
+        margin: 40px 0px 0px -27px; 
+    }
+}
 /* footer */
 .footer {
     background-color: #f9f9f9;
@@ -833,7 +1199,39 @@ section {
 .icon:hover {
     color: #ff3d00; /* Change hover color as per theme */
 }
+@media (max-width:768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .footer-left, .footer-right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-right .footer-links {
+        margin-top: 20px;
+    }
+    .footer-right .footer-links {
+        margin: -10px;
+    }
+    .social-icons {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-right .footer-links a:not(:first-child)::before {
+        left: -20px;
+    }
+    .footer-right .footer-links a {
+        justify-content: center;
+        margin: 15px;
+    }
+    .footer-right .footer-inquiries p {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
 /* Footer Copy Section */
 .footer-copy {
     background-color: #ffffff;
@@ -875,25 +1273,12 @@ section {
     text-decoration: none;
 
 }
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .footer-left, .footer-right {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .footer-right .footer-links {
-        margin-top: 20px;
-    }
-}
 /* services-1 */
 .services-1 {
     padding-top: 80px;
     position: relative; 
+    background-color: #fff;
 }
 
 .services-1 .text {
@@ -976,7 +1361,7 @@ section {
     margin-bottom: 0;
     padding: 0;
     position: relative; /* Ensure images stay on top */
-    z-index: 100; /* Ensure images are above the SVG */
+    z-index: 2; /* Ensure images are above the SVG */
 }
 
 /* Remove bottom padding from the service sections */
