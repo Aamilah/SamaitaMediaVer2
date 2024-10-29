@@ -397,7 +397,9 @@ blockquote{
 @media (min-width: 1024px) {
     /* Larger screens */
     .navbar-container {
-        padding: 30px 60px;
+        padding: 20px 20px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .logo-light, .logo-dark {
@@ -405,7 +407,7 @@ blockquote{
     }
 
     .proposal-link {
-        margin-left: 800px; /* Adjusted for large screens */
+        margin-left: 950px; /* Adjusted for large screens */
     }
 
     .circle {
@@ -531,8 +533,8 @@ blockquote{
     position: relative;
     text-align: center;
     width: 200px;
-    margin-top: 320px;
-    margin-left: 130px;
+    top: 70%;
+    left: 10%;
 }
 
 .circle-arrow-link {
@@ -1409,4 +1411,109 @@ section {
     margin-top: -300px;
     padding-top: 100px;
     background-color: #000;
+}
+/* about-1 */
+.about-1 {
+    padding-top: 80px;
+}
+
+.about-1 .text {
+    margin-top: 70px;
+    background-color: #f9f9f9;
+    padding: 20px 40px 20px 40px;
+}
+
+.about-1 h1 {
+    font-weight: bold;
+    font-size: 46px; 
+    margin: 10px 0px; 
+}
+
+.about-1 p {
+    margin: 20px 0 10px 0;
+}
+
+.video {
+    position: relative;
+    padding: 30px;
+    width: 700px; 
+    margin-top: 30px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.video-container img {
+    width: 100%;
+    height: auto;
+}
+
+.video-container video {
+    position: absolute;
+    top: 10%; 
+    left: 13%; 
+    width: 74%; 
+    height: auto; 
+    pointer-events: none;
+}
+
+/* About-us */
+.about-us{
+    padding-top: 80px;
+}
+.about-us .text{
+   margin-top: 100px;
+}
+.about-us h1{
+    font-weight: bold;
+    font-size: 46px; 
+    margin: 10px 0px; 
+}
+.about-us p{
+    margin:20px 0 10px 0;
+    width: 80%;
+}
+.img-container-about-us {
+    position: relative; 
+    width: 50%;
+}
+
+.background-svg-about-us {
+    margin-top: 100px;
+    width: 70%; 
+}
+
+.image-about-us {
+    position: absolute; 
+    top: 0;
+    left: 0px;
+}
+@media (max-width:768px) {
+    .index-1{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .svg-container-index-1 {
+        display: none;
+    }
+}
+/* About Footer */
+.about-footer{
+    background-color: #000;
+    height: auto;
+}
+.about-footer .content{
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+.about-footer h2{
+    font-family: 'Bebas Neue', Arial, sans-serif; 
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: 46px; 
+    text-transform: uppercase;
 }
