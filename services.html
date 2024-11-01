@@ -33,9 +33,10 @@
     <nav>
         <div class="navbar-container" id="navbar-container"  data-logo-color="light">
             <!-- Logo -->
-            <img src="images/logo-light.svg" alt="Light Logo" class="logo-light">
-            <img src="images/logo-dark.svg" alt="Dark Logo" class="logo-dark hidden">
-
+            <a href="index.html">
+                <img src="images/logo-light.svg" alt="Light Logo" class="logo-light">
+                <img src="images/logo-dark.svg" alt="Dark Logo" class="logo-dark hidden">
+            </a>
             <!-- Get a Proposal -->
             <div class="proposal-link">
                 <a href="#" class="light">GET A PROPOSAL</a> <!-- Start with dark class -->
@@ -57,7 +58,8 @@
         <div class="left-side">
             <!-- Logo -->
             <div class="logo-left-side">
-                <img src="images/logo-dark.svg" alt="logo">
+                <img src="images/logo-light.svg" alt="Light Logo" class="logo-left-side-light hidden" >
+                <img src="images/logo-dark.svg" alt="Dark Logo" class="logo-left-side-dark" >
             </div>
             <h2>Let us help you become a success. Get in touch for a design proposal.</h2>
             <p><i class="fa-solid fa-mobile-retro"></i>+1 615-693-5055</p>
@@ -68,11 +70,16 @@
         <!-- Right Side Content (menu items) -->
         <div class="right-side">
             <div class="menu-header">
-                <p>Get to know more about us</p>
+                <p>Dark Mode</p>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
                 <div class="close-btn" id="closeMenu">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
             </div>
+            
 
             <ul class="menu-list">
                 <li><a href="index.html" class="menu-list-link"><span>01</span> Work</a></li>
@@ -84,6 +91,7 @@
             </ul>
         </div>
     </div>
+
 
     <section class="banner-index" data-logo-color="light" style="background-image: url('images/services-banner.png');">
         <div class="row">
@@ -135,7 +143,8 @@
             </div>
             <div class="col-lg-7">
                 <div class="img-container-services-1">
-                    <img src="images/logo-dark.svg" alt="Background Image" class="image-services-1">
+                    <img src="images/logo-dark.svg" alt="Background Image" class="image-services-1 image-services-1-dark">
+                    <img src="images/logo-light.svg" alt="Background Image" class="image-services-1 image-services-1-light hidden">
                 </div>
             </div>
         </div>
@@ -314,7 +323,8 @@
     <div class="footer-content">
         <div class="footer-left">
             <div class="logo">
-                <img src="images/logo-dark.svg" alt="Samaita Media Logo" />
+                <img src="images/logo-light.svg" alt="Light Logo" class="logo-left-side-light hidden" >
+                <img src="images/logo-dark.svg" alt="Dark Logo" class="logo-left-side-dark" >
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="social-icons">
@@ -351,5 +361,7 @@
     <script src="js/script.js"></script>
     <script src="js/scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/modes.js" ></script>
+
 </body>
 </html>
