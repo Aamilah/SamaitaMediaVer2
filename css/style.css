@@ -18,6 +18,7 @@ h1 {
     line-height: 1.2;
     font-weight: bold;
     font-size: 46px; 
+    margin: 10px 0px; 
     text-transform: uppercase;
 }
 
@@ -66,60 +67,42 @@ blockquote{
 .light:hover{
     color: #fff;
 }
+/* Toggle Switch Container */
 .toggle-switch {
     position: relative;
-    width: 60px; /* Adjusted width */
-    height: 25px; /* Adjusted height */
-    margin-left: -250px;
-}
-
-label {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    width: 60px; 
+    height: 25px; 
+    right: 30%;
     background-color: #333333; 
-    border-radius: 15px; 
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-input {
-    display: none;
-}
-
-.slider {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: #333333; /* Dark mode background */
     border-radius: 15px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-input:checked + .slider {
-    background-color: #f0f0f0; /* Light mode background */
+.toggle-switch input {
+    display: none; 
 }
 
-.slider::before {
-    content: "";
+.toggle-switch input:checked + .slider {
+    background-color: #f0f0f0; 
+}
+
+.slider {
     position: absolute;
-    top: 3px; 
-    left: 5px; 
-    width: 18px; 
-    height: 18px; 
+    top: 3px;
+    left: 5px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    box-shadow: inset 20px -2px 0px 0px #f0f0f0; 
     background-color: #fff; 
     transition: transform 0.3s, background-color 0.3s;
 }
 
-input:checked + .slider::before {
-    transform: translateX(28px); /* Adjusted for new width */
-    background-color: #000; /* Dark mode knob */
-    box-shadow: none;
+.toggle-switch input:checked + .slider {
+    transform: translateX(28px); 
+    background-color: #000; 
 }
+
 
 /* Dark mode styles */
 body.dark-mode {
@@ -165,22 +148,28 @@ body.dark-mode .logo-left-side-dark {
 body.dark-mode .svg-container-service-1 .timeline-1 g {
     stroke: hsl(0, 0%, 100%); /* White stroke for dark mode */
 }
-
-/* Toggle button appearance */
-.theme-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5em;
+body.dark-mode .faq{
+    background-color: #000;
+}
+body.dark-mode .faq p{
+    color: #f0f0f0;
+}
+body.dark-mode .index-1 .custom-button{
+    background-color: #fff;
+    padding: 10px 25px;
+    border-radius: 50px;
 }
 
-body.dark-mode #theme-toggle {
-    color: #f1c40f; /* Bright yellow for sun icon in dark mode */
+body.dark-mode .index-3 .custom-button{
+    background-color: #fff;
+    padding: 10px 25px;
+    border-radius: 50px;
 }
-
+body.dark-mode .services-1 .custom-button{
+    background-color: #fff;
+    padding: 10px 25px;
+    border-radius: 50px;
+}
 .cursor {
     position: fixed;
     top: 0;
@@ -1689,3 +1678,158 @@ body.dark-mode .image-services-1-dark {
     font-size: 46px; 
     text-transform: uppercase;
 }
+/* contact-1 */
+.contact-1 {
+    padding: 40px;
+    background-color: #000;
+    height: 75vh;
+}
+
+.contact-1-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.contact-1-content img {
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.contact-1 .contact-1-content h1 {
+    font-weight: bold;
+    font-size: 36px; 
+    margin: 0px 0px; 
+    color: #ddd;
+}
+
+.contact-1 .contact-1-content p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+    width: 90%;
+}
+
+.contact-1 .form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-1 .form-container label{
+    color: #f0f0f0;
+}
+.contact-1 .form-container input,
+.contact-1 .form-container textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.contact-1 .form-container input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-1 .form-container input[type="submit"]:hover {
+    background-color: #fd1111;
+}
+
+.contact-1 .form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-1 .form-row .form-group {
+    flex: 1;
+}
+/* faq */
+.faq{
+    background-color: #fff;
+    padding: 100px 50px;
+    height: auto;
+}
+.faq-content img{
+    width: 150%;
+    height: auto;
+    margin-top: -80px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.faq p{
+    color: #333;
+}
+.faq h1{
+    font-weight: bold;
+    font-size: 36px; 
+    margin-bottom: 20px;
+}
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.accordion__item {
+    border: 1px solid #e5f3fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.accordion__header {
+padding: 20px 25px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion__header::after {
+    content: '';
+    background: url(https://www.svgrepo.com/show/357035/angle-down.svg) no-repeat center;
+    width: 20px;
+    height: 20px;
+    transition: .4s;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+}
+
+.accordion__header.active {
+    background: #e5f3fa;
+}
+
+.accordion__header.active::after {
+    transform: rotateX(180deg);
+}
+
+.accordion__content {
+    padding: 0 25px;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.accordion__item.active .accordion__content {
+    max-height: 1000px; /* Arbitrary high value to allow for smooth expansion */
+    padding-top: 15px; /* Optional: add padding for a nice effect */
+    padding-bottom: 15px;
+}
+
