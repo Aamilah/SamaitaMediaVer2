@@ -200,9 +200,9 @@ body.dark-mode .services-1 .custom-button{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 6px; /* Slightly larger inner dot */
+    width: 6px; 
     height: 6px;
-    background-color: currentColor; /* Use current color for the inner dot */
+    background-color: currentColor; 
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
@@ -249,10 +249,19 @@ body.dark-mode .services-1 .custom-button{
 
 .proposal-link a {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
     color: #fbf9f9;
     letter-spacing: 2px;
     font-weight: bold;
+    border-radius: 20px;
+    border: solid 3px;
+    padding: 10px 20px;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    letter-spacing: 3px;
+}
+.proposal-link a:hover{
+    background-color: #fd1111;
+    text-decoration: none;
 }
 .proposal-link a.light {
     color: #fff; /* Light color for the proposal link */
@@ -261,19 +270,7 @@ body.dark-mode .services-1 .custom-button{
 .proposal-link a.dark {
     color: #000; /* Dark color for the proposal link */
 }
-.underline {
-    width: 60px;
-    height: 3px;
-    background-color: #fbf9f9;
-    margin-top: 5px;
-}
-.underline.light {
-    background-color: #fff; /* Light color for the underline */
-}
 
-.underline.dark {
-    background-color: #000; /* Dark color for the underline */
-}
 /* Hamburger Menu */
 .hamburger-menu {
     cursor: pointer;
@@ -1701,7 +1698,7 @@ body.dark-mode .image-services-1-dark {
     height: auto;
 }
 .about-footer .content{
-    padding: 30px;
+    padding: 100px;
     color: white;
     text-align: center;
 }
@@ -1805,6 +1802,9 @@ body.dark-mode .image-services-1-dark {
     align-items: center;
     text-align: center;
 }
+.faq-content h2{
+    margin-bottom: 30px;
+}
 .faq p{
     color: #333;
 }
@@ -1812,6 +1812,23 @@ body.dark-mode .image-services-1-dark {
     font-weight: bold;
     font-size: 36px; 
     margin-bottom: 20px;
+}
+.faq-link a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #fbf9f9;
+    background-color: #fd1111;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: solid 3px;
+    padding: 10px 20px;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    letter-spacing: 3px;
+}
+.faq-link a:hover{
+    color: #000;
+    text-decoration: none;
 }
 .accordion {
     display: flex;
